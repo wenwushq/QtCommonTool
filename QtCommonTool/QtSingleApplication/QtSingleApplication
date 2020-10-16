@@ -1,0 +1,18 @@
+#include "qtsingleapplication.h"
+
+/*
+只需要包含qtlocalpeer的头文件和cpp文件，qtsingleapplication的头文件和cpp文件
+使用说明：
+	#include ".\QtSingleApplication\QtSingleApplication"
+
+	QtSingleApplication a("SingleApp", argc, argv);
+	if (a.sendMessage("ActiveWindow!"))
+		return 0;
+
+	QWidget w;
+	w.show();
+
+	a.setActivationWindow(&w);
+
+	return a.exec();
+*/

@@ -1,0 +1,2 @@
+#include "QtSQLHelper.h"
+//SetConnectParam("127.0.0.1", "", ":memory:", "", "", QSQLITE);
