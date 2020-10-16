@@ -70,9 +70,11 @@ void QtSQLHelper::SetConnectParam(QString strHostName, QString strPort, QString 
 //执行SQL语句
 bool QtSQLHelper::ExecuteQuery(QString strSql, QSqlQuery &sqlQuery)
 {
+	m_mutex.lock();
 	QSqlQuery sqlQueryRet;
 	if (m_database.open())
 		sqlQuery = m_database.exec(strSql);
+	m_mutex.unlock();
 
 	QString strError = m_database.lastError().text();
 	if (!strError.isEmpty())
