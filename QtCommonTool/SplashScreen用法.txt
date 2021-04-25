@@ -1,0 +1,9 @@
+QtSplashScreen *pSplash = new QtSplashScreen(":/resources/splash/splash.gif");
+	//QtSplashScreen *pSplash = new QtSplashScreen(QPixmap(":/resources/splash/splash.png"));
+	pSplash->show();
+
+APP app;
+    app.show();
+
+	pSplash->finish(&app);
+	delete pSplash;
